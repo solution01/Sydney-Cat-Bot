@@ -239,6 +239,11 @@ module.exports = client = async (client, info, settings, color) => {
 ┃ ${prefix}
 ╰━━━━━━━━━━━━━━━━━━━━━━━━━╯
 ╭━━━━━━━━━━━━━━━━━━━━━━━━━╮
+┃~> MENU DOWNLOAD
+┃━━━━━━━━━━━━━━━━━━━━━━━━━╯
+┃ ${prefix}play
+┃ ${prefix}play-video
+╭━━━━━━━━━━━━━━━━━━━━━━━━━╮
 ┃~> MENU BRINCADEIRA
 ┃━━━━━━━━━━━━━━━━━━━━━━━━━╯
 ┃ ${prefix}feio
@@ -319,9 +324,9 @@ os comandos nao estao todos listados aqui entao vc nao pode achar alguns nesse m
 
       case 'play-vídeo':
       case 'play-video': {
-        if (!args.join(' ' < 1)) return reply("Coloque o nume do video junto ou o link mas tem que ser do youtube...")
+        if (!args.join(' ' < 1)) return reply("Coloque o nome do video junto ou o link mas tem que ser do youtube...")
         const pedido = args.join('');
-        reply("enviando...")
+        reply("enviando isso pode demorar um tempo...")
         anikit.playMP4(`${q}`, username, key).then((response) => {
           //console.log(response);
           client.sendMessage(from, {
@@ -335,11 +340,11 @@ os comandos nao estao todos listados aqui entao vc nao pode achar alguns nesse m
         })
       } break
 
-      case 'play-áudio':
-      case 'play-audio': {
-        if (!args.join(' ' < 1)) return reply("Coloque o nume do video junto ou o link mas tem que ser do youtube...")
+      case 'play':
+      case 'play': {
+        if (!args.join(' ' < 1)) return reply("Coloque o nome do video junto ou o link mas tem que ser do youtube...")
         const pedido = args.join('');
-        reply("enviando...")
+        reply("enviando isso pode demorar um tempo...")
         anikit.playMP3(`${q}`, username, key).then((response) => {
           //console.log(response);
           client.sendMessage(from, {
